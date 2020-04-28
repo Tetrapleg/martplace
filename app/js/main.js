@@ -28,6 +28,16 @@ $(function(){
     $('select').styler();
 
 
+    $('.menu__list-btn').on('click', function(){
+        $('.menu__list-inner').slideToggle();
+    });
+
+
+    $('.header__btn-menu').on('click', function(){
+        $('.header__box').toggleClass('active');
+    });
+
+
     $(window).on("load", function () {
         if ($('.products__inner-box').length) {
             var mixer = mixitup('.products__inner-box');
