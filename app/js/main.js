@@ -12,8 +12,14 @@ $(function(){
         dots: false,
         slidesToShow: 1,
         slidesToScroll: 1,
-        // prevArrow: '<button class="slick-arrow slick-prev"><img src="/images/lnr-chevron-left.svg" alt=""></button>',
-        // nextArrow: '<button class="slick-arrow slick-next"><img src="/images/lnr-chevron-right.svg" alt=""></button>',
+        responsive: [
+            {
+              breakpoint: 640,
+              settings: {
+                dots: true
+              }
+            }
+        ]
     });
 
 
@@ -22,6 +28,30 @@ $(function(){
         slidesToShow: 3,
         slidesToScroll: 3,
         centerPadding: "0px",
+        responsive: [
+            {
+              breakpoint: 1100,
+              settings: {
+                slidesToShow: 2,
+                slidesToScroll: 2,
+              }
+            },
+            {
+                breakpoint: 680,
+                settings: {
+                  slidesToShow: 1,
+                  slidesToScroll: 1,
+                }
+            },
+            {
+                breakpoint: 640,
+                settings: {
+                  dots: true,
+                  slidesToShow: 1,
+                  slidesToScroll: 1,
+                }
+            },
+        ]
     });
 
 

@@ -568,17 +568,18 @@
         padding-bottom: 0px;
     }
 }
-
-.pages__menu{
+.pages__menu-inner{
+    width: 1140px;
     display: flex;
     justify-content: space-between;
     padding: 0 20px;
+}
+.pages__menu{
     transition: all .3s;
     height: 0;
     overflow: hidden;
     background-color: #fff;
     box-shadow: 0px 5px 40px 0px rgba(82, 85, 90, 0.2);
-    width: 1140px;
     border-top: 0px solid $blue;
     border-radius: 0 0 4px 4px;
     position: absolute;
@@ -723,8 +724,8 @@
 .digital-gradient{
     background-image: linear-gradient( 180deg, rgb(0,48,222) 0%, rgb(23,69,237) 54%, rgb(46,90,251) 100%);
     width: 100%;
-    min-height: 726px;
-  }
+    max-height: 726px;
+}
 .digital__inner{
     padding: 185px 0px 70px;
     color: #f3f3f8;
@@ -1004,6 +1005,7 @@
         }
         .slider__item-descr{
             margin-top: 27px;
+            max-height: 120px;
             font-size: 16px;
             line-height: 30px;
             color: #555555;
@@ -1011,6 +1013,7 @@
         }        
     }
     &-btn{
+        margin-top: 15px;
         border-bottom: 1px solid #ececec;
         a{
             font-size: 15px;
@@ -1192,15 +1195,17 @@ button{
 }
 .products__inner-box{
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     flex-wrap: wrap;
     padding-bottom: 30px;
+    margin-left: -20px;
 }
 .products__item{
-    display: flex !important;
+    display: flex;
     flex-direction: column;
     justify-content: space-between;
-    max-width: 361px;
+    flex-basis: calc(33.333% - 20px);
+    margin-left: 20px;
     min-height: 530px;
     margin-bottom: 30px;
     background-color: #fff;
@@ -1209,6 +1214,7 @@ button{
     &-images{
         width: 100%;
         height: 230px;
+        border-radius: 4px 4px 0 0;
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
@@ -1348,6 +1354,9 @@ button{
 .products-slider__inner .slick-prev.slick-arrow::before,
 .products-slider__inner .slick-next.slick-arrow::before{
     background-color: $blue;
+}
+.products-slider__inner.slick-slider{
+    margin-left: -20px;
 }
 
 
@@ -1516,11 +1525,11 @@ button{
 // start shopping
 
 
-.shopping__wrapper{
+.shopping{
     max-width: 1918px;
     margin: 0 auto;
 }
-.container-fluid{
+.shopping__wrapper{
     width: 100%;
     margin: 0 auto;
     display: flex;
@@ -1683,6 +1692,7 @@ button{
     &-images{
         width: 100%;
         height: 230px;
+        border-radius: 4px 4px 0 0;
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
@@ -1694,6 +1704,7 @@ button{
         line-height: 30px;
         color: #000;
         padding-left: 30px;
+        padding-right: 15px;
         text-align: left;
         margin-bottom: auto;
         p{
@@ -1815,8 +1826,12 @@ button{
 
     }
     &__inner{
-        padding: 100px 0;
+        height: 400px;
         text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
         &-title{
             font-size: 36px;
             line-height: 48px;
